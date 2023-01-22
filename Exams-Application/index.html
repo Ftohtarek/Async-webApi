@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ftoh</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row align-items-center h-100 justify-content-center">
+                <div class="col-md-10 overflow-hidden">
+                    <!-- alert popup -->
+                    <div class="fixed-height">
+                        <div id="pop-up" class="alert alert-danger"> </div>
+                    </div>
+                    <!-- home page  -->
+                    <div class="card" id="home">
+                        <div class="card-header text-center py-5">
+                            <h2>
+                                Setting Your Exam
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <!-- catogery Field -->
+                            <div class="sec">
+                                <h5>Catogery</h5>
+                                <select class="custom-select" id="catogery">
+                                    <option selected>Choose</option>
+                                    <option value="18">Computer Science</option>
+                                    <option value="21">Sports</option>
+                                    <option value="23">History</option>
+                                </select>
+                            </div>
+
+                            <div class="sec">
+                                <h5>Diffuculty</h5>
+                                <div class="form-check">
+                                    <input type="radio" checked id="option1" name="diff" value="easy"
+                                        class="form-check-input">
+                                    <label for="option1" class="form-check-label">Easy</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="option2" name="diff" value="medium"
+                                        class="form-check-input">
+                                    <label for="option2" class="form-check-label">Medium</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="option3" name="diff" value="hard" class="form-check-input">
+                                    <label for="option3" class="form-check-label">Hard</label>
+                                </div>
+                            </div>
+                            <!-- number Question Field -->
+                            <div class="sec">
+                                <div class="form-gorup">
+                                    <input type="number" class="form-control" placeholder="Enter Q number "
+                                        id="numberQuation">
+                                </div>
+                            </div>
+                            <button type="button" class=" w-25 btn btn-primary float-right mt-4" id="btnSubmit">Start</button>
+                            <div class="clearFix"></div>
+                        </div>
+                    </div>
+
+                    <!-- quiz Page  -->
+                    <div class="card" id="quiz">
+                        <div class="card-header py-3">
+                            <h2 class="text-center">Quiz</h2>
+                            <div class="clearFix"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="py-3"> Q: <span id="question"></span> </h4>
+                            <div id="row-answer">
+                            </div>
+                            <a id="show-answer" class="text-secondary float-left">Show answer</a>
+                            <button type="button" class=" w-25 btn btn-primary my-2 float-right"
+                                id="btnSubmitAnswer">check</button>
+                            <div class="clearFix"></div>
+                            <div id="answer-container" class="shadow-sm mt-2 p-2"></div>
+                        </div>
+                        <div class="text-center my-1">
+                            <div  id="prograssNavLabel"></div>
+                            <progress id="prograssNav" max="100" value="70" > </progress>
+                        </div>
+
+                    </div>
+
+                    <!--Result Page  -->
+                    <div class="card" id="finish">
+                        <div class="card-header py-5">
+                            <h2 class="text-center">Finish</h2>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="py-3 text-center"> Score <br> <span id="score"></span></h4>
+                            <button type="button" class=" w-25 btn btn-primary float-right my-2" id="tryAgain">Try
+                                Again</button>
+                            <div class="clearFix"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

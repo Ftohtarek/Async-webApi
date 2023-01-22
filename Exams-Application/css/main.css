@@ -1,0 +1,31 @@
+.sec {
+    margin: 20px 0px;
+}
+
+h5 {
+    font-weight: 400;
+}
+
+#quiz,
+#correct,
+#incorrect,
+#finish {
+    display: none;
+}
+
+#question {
+    font-weight: normal;
+}
+
+#pop-up {
+    display: none;
+}
+
+.fixed-height {
+    height: 50px;
+}
+
+
+#prograssNav {
+    width: 95%;
+}
